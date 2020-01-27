@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta name="description" content="Manga de kimetsu no yaiba">
 	<meta name="theme-color" content="white">
@@ -12,39 +13,37 @@
  	<link rel="shortcut icon" type="image/png" href="./image/icon_128.png">
  	<link rel="apple-touch-icon" href="./image/icon_512.png">
  	<link rel="apple-touch-startup-image" href="./image/logomarce.png">
-	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="materialize.css">
 	<!-- <link rel="manifest" href="manifest.json">
  -->	<title>Kimetsu No Yaiba</title>
 </head>
 <body>
 		<!-- <h1 class="text-center">Cecilia Rojas</h1> -->
-	<div class="container-fluid">
+  <!-- inicio navbar -->
+   <nav>
+    <div class="nav-wrapper white">
+      <a href="#!" class="brand-logo"><img src="image/marcelogo.png" style="width: 100px;" class="responsive-img"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html" class="black-text">Home</a></li>
+        <li><a href="kimetsu.html" class="black-text">Kimetsu no Yaiba</a></li>
+      </ul>
+    </div>
+  </nav>
 
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><img src="image/marcelogo.png"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="kimetsu.html">Kimetsu no Yaiba</a>
-      </li>
-
-    </ul>
-    <span class="navbar-text">
-      Manga de Kimetsu no Yaiba
-    </span>
-  </div>
-</nav>
-
-	</div>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="kimetsu.html">Kimetsu no Yaiba</a></li>
+  </ul>
+  <!-- fin del navbar -->
 	<iframe style="width: 100vw; height: 100vh;" src="https://tmofans.com/library/manga/15125/kimetsu-no-yaiba"></iframe>
 	<script src="script.js"></script>
 	<script src="jquery-3.4.1.min.js"></script>
-	<script src="bootstrap.js"></script>
+	<script src="materialize.js"></script>
+  <script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+    });
+  </script>
 </body>
 </html>
